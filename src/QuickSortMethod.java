@@ -1,6 +1,6 @@
 public class QuickSortMethod
 {
-    public void quickSort(int[] arr, int left, int right)
+    public static void quickSort(int[] arr, int left, int right)
     {
         if(left<right)
         {
@@ -11,12 +11,13 @@ public class QuickSortMethod
         }
     }
 
-    public int partition(int[] arr, int left, int right)
+    public static int partition(int[] arr, int left, int right)
     {
-        int pivot = right;
+        int pivot = arr[right];
+        System.out.println("Pivot: " + pivot);
         int i = left-1;
 
-        for(int j = 0;j<=right;j++)
+        for(int j = left;j<right;j++)
         {
             if(arr[j]<=pivot)
             {
@@ -28,4 +29,16 @@ public class QuickSortMethod
         return(i+1);
     }
 
+    /**
+     * swaps two items in an integer array
+     * @param arr array that we will swap items for
+     * @param pos1 selected position value to swap
+     * @param pos2 other selected position value to swap
+     */
+    public static void swap(int[] arr,int pos1,int pos2)
+    {
+        int temp = arr[pos1];
+        arr[pos1] = arr[pos2];
+        arr[pos2] = temp;
+    }
 }
