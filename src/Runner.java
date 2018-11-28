@@ -2,7 +2,7 @@ public class Runner
 {
     public static void main(String[] args)
     {
-        int[] check = randIntArr(10);
+        int[] check = randIntArr(1000);
         printArr(check);
 
         long start = System.currentTimeMillis();
