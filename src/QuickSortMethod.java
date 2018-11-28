@@ -1,5 +1,11 @@
 public class QuickSortMethod
 {
+    /**
+     * Sorts an array of integers using quickSort
+     * @param arr array to sort
+     * @param left left element position
+     * @param right right element position
+     */
     public static void quickSort(int[] arr, int left, int right)
     {
         if(left<right)
@@ -11,6 +17,13 @@ public class QuickSortMethod
         }
     }
 
+    /**
+     * Creates a partition to sort two sides separately
+     * @param arr array to create a partition in
+     * @param left left element position
+     * @param right right element position
+     * @return int representing the partition position in arr
+     */
     public static int partition(int[] arr, int left, int right)
     {
         int pivot = arr[right];
